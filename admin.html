@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #fff; 
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .button-container button {
+            padding: 15px 30px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: lightskyblue; 
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 200px; 
+        }
+        .button-container button:hover {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Portal</h1>
+        <div class="button-container">
+            <button onclick="location.href='student_input.html'">Add New Student</button>
+            <button onclick="location.href='driver_input.html'">Add New Driver</button>
+            <button onclick="location.href='fetch_data_student.html'">Student Data</button>
+            <button onclick="location.href='fetch_data_driver.html'">Driver Data</button>
+            
+        </div>
+    </div>
+</body>
+</html

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/logincss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,700;1,200;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <title>Student Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Jost', sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .login__content {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            height: 400px;
+            margin: auto;
+        }
+        
+        .login__title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .login__form {
+            text-align: center;
+        }
+        
+        .login__inputs {
+            margin-bottom: 20px;
+        }
+        
+        .login__input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+            text-align: center;
+        }
+        
+        .login__box {
+            position: relative;
+        }
+        
+        .login__eye {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        
+        .login__check {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .login__buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .login__button,
+        .login_button-ghost {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .login__button {
+            background-color: #000;
+            color: white;
+            margin-right: 10px;
+        }
+        
+        .login_button-ghost {
+            background-color: transparent;
+            border: 1px solid #000;
+            color: #000;
+        }
+        
+        .login_button-ghost:hover {
+            background-color: #000;
+            color: white;
+        }
+        
+        .btn-blue {
+            background-color: blue;
+            color: white;
+        }
+
+        #error-message {
+            color: red;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login__content">
+            <form action="student_login.php" method="post" class="login__form">
+                <div>
+                    <h1 class="login__title">
+                        <span>Student</span> Login
+                    </h1>
+                </div>
+                <div id="error-message">Invalid ID or Password</div>
+                <div class="login__inputs">
+                    <div>
+                        <label for="input-id" class="login__label">ID</label>
+                        <input type="ID" placeholder="Enter your ID" required class="login__input" id="input-id"
+                            name="input-id">
+                    </div>
+                    <div>
+                        <label for="input-pass" class="login__label">Password</label>
+                        <div class="login__box">
+                            <input type="password" placeholder="Enter your password" required class="login__input"
+                                id="input-pass" name="input-pass">
+                            <i class="ri-eye-off-line login__eye" id="input-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="login__check">
+                    <input type="checkbox" class="login__check-input" id="input-check">
+                    <label for="input-check" class="login__check-label">Remember me</label>
+                </div>
+                <div class="login__buttons">
+                    <button class="login__button" type="submit">Log In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('error')) {
+            document.getElementById('error-message').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

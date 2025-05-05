@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Point management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            position: relative;
+            background-color: black;
+            /* Change background color to black */
+            color: white;
+            /* Change text color to white */
+        }
+
+        .table-container {
+            display: none;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            /* Center the table vertically */
+            left: 70%;
+            /* Center the table horizontally */
+            transform: translate(-50%, -50%);
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            /* Increase the width of the table */
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        th,
+        td {
+            border: 1px solid #fff;
+            padding: 12px;
+            /* Increase padding for better spacing */
+            text-align: center;
+            min-width: 150px;
+            /* Set a minimum width for columns */
+        }
+
+        th {
+            background-color: #064ea1;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            /* Align buttons horizontally at the center */
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            margin: 0 10px;
+            /* Add margin between buttons */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table-container" id="tableContainer">
+        <table>
+            <thead>
+                <tr>
+                    <th>Student_ID</th>
+                    <th>Name</th>
+                    <th>Point_no</th>
+                    <th>Phone</th>
+                    <th>Fee_Status</th>
+                    <th>Driver_ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>K214659</td>
+                    <td>Sameel Ashar</td>
+                    <td>25B</td>
+                    <td>123-456-7890</td>
+                    <td>Paid</td>
+                    <td>Z-09883</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <nav>
+        <div class="logo">
+            <h1>Student Portal</h1>
+        </div>
+    </nav>
+
+
+
+    <section>
+        <div class="content">
+            <h1 data-aos="fade-right" data-aos-duration="2000" data-aos-delay="700">Your Safe & Comfortable Travel
+                Journey Is Our Goal</h1>
+            <p data-aos="fade-left" data-aos-duration="2000" data-aos-delay="800">Our bus management website simplifies
+                route management, schedules, and passenger tracking. It offers real-time bus tracking for a seamless
+                travel experience.</p>
+            <div class="button-container">
+                <button onclick="window.location.href='real_time_tracking.html';">Go to Real-Time Tracking</button>
+                <button onclick="window.location.href='routes.html';">View Routes</button>
+                <button onclick="window.location.href='fee.html';">Fee Challan</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+
+    </script>
+</body>
+
+</html>

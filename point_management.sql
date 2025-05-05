@@ -1,0 +1,285 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1:3307
+-- Generation Time: May 03, 2025 at 04:25 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `point_management`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_login`
+--
+
+CREATE TABLE `admin_login` (
+  `email` varchar(20) NOT NULL,
+  `admin_password` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin_login`
+--
+
+INSERT INTO `admin_login` (`email`, `admin_password`) VALUES
+('k214947@nu', 123);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `driver`
+--
+
+CREATE TABLE `driver` (
+  `Name` varchar(50) NOT NULL,
+  `Route` varchar(50) NOT NULL,
+  `Point_no` varchar(50) NOT NULL,
+  `Phone` varchar(50) NOT NULL,
+  `Driver_ID` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `driver`
+--
+
+INSERT INTO `driver` (`Name`, `Route`, `Point_no`, `Phone`, `Driver_ID`) VALUES
+('Usman', 'Korangi', '10', '03451234567', 'D_10'),
+('Aiman', 'Defence', '100', '03434567890', 'D_100'),
+('Zubair', 'Korangi', '101', '03045678901', 'D_101'),
+('Minahil', 'Clifton', '102', '03156789012', 'D_102'),
+('Saif', 'Johar', '103', '03267890123', 'D_103'),
+('Faryal', 'FB Area', '104', '03378901234', 'D_104'),
+('Hammad', 'Orangi', '105', '03489012346', 'D_105'),
+('Uzair', 'Malir', '106', '03099998888', 'D_106'),
+('Rameen', 'Model Colony', '107', '03188887777', 'D_107'),
+('Jibran', 'Landhi', '108', '03277776666', 'D_108'),
+('Afshan', 'North Karachi', '109', '03366665555', 'D_109'),
+('Tanveer', 'Surjani', '110', '03455554444', 'D_110'),
+('Naeem', 'Scheme 33', '111', '03041234567', 'D_111'),
+('Sumbul', 'Gulshan', '112', '03142345678', 'D_112'),
+('Qasim', 'Nazimabad', '113', '03243456789', 'D_113'),
+('Aqeel', 'Saddar', '114', '03344567890', 'D_114'),
+('Naila', 'Defence', '115', '03445678901', 'D_115'),
+('Tabish', 'Korangi', '116', '03046789012', 'D_116'),
+('Amara', 'Clifton', '117', '03147890123', 'D_117'),
+('Fahad', 'Johar', '118', '03248901234', 'D_118'),
+('Sahar', 'FB Area', '119', '03349012345', 'D_119'),
+('Ali', 'Gulshan', '12', '03001234567', 'D_12'),
+('Basit', 'Orangi', '120', '03440123456', 'D_120'),
+('Nashit', 'Malir', '121', '03041239876', 'D_121'),
+('Shaista', 'Model Colony', '122', '03142349876', 'D_122'),
+('Rohan', 'Landhi', '123', '03243459876', 'D_123'),
+('Iqbal', 'North Karachi', '124', '03344569876', 'D_124'),
+('Sumaira', 'Surjani', '125', '03445679876', 'D_125'),
+('Ahsan', 'Scheme 33', '126', '03046789876', 'D_126'),
+('Zarmeen', 'Gulshan', '127', '03147899876', 'D_127'),
+('Haris', 'Nazimabad', '128', '03248999876', 'D_128'),
+('Khadija', 'Saddar', '129', '03349099876', 'D_129'),
+('Maaz', 'Defence', '130', '03440199876', 'D_130'),
+('Nida', 'Johar', '15', '03124567890', 'D_15'),
+('Sara', 'Nazimabad', '18', '03111234567', 'D_18'),
+('Bilal', 'FB Area', '19', '03234567890', 'D_19'),
+('Ahmed', 'Madras', '23', '03002514875', 'D_23'),
+('Farah', 'Defence', '25', '03331234567', 'D_25'),
+('Zain', 'Saddar', '30', '03211234567', 'D_30'),
+('Faisal', 'Malir', '31', '03019876543', 'D_31'),
+('Lubna', 'Model Colony', '32', '03121234567', 'D_32'),
+('Kamran', 'Landhi', '33', '03219874561', 'D_33'),
+('Ayesha', 'North Karachi', '34', '03323456789', 'D_34'),
+('Noman', 'Surjani', '35', '03427654321', 'D_35'),
+('Sidra', 'Scheme 33', '36', '03013456789', 'D_36'),
+('Imran', 'Gulshan', '37', '03114567891', 'D_37'),
+('Rabia', 'Nazimabad', '38', '03211239876', 'D_38'),
+('Junaid', 'Saddar', '39', '03314569872', 'D_39'),
+('Shazia', 'Defence', '40', '03455678912', 'D_40'),
+('Yasir', 'Korangi', '41', '03031234987', 'D_41'),
+('Mehwish', 'Clifton', '42', '03122349876', 'D_42'),
+('Hassan', 'Johar', '43', '03233458976', 'D_43'),
+('Sana', 'FB Area', '44', '03334569781', 'D_44'),
+('Omar', 'Orangi', '45', '03447896512', 'D_45'),
+('Bushra', 'Malir', '46', '03035678912', 'D_46'),
+('Waqar', 'Model Colony', '47', '03127894561', 'D_47'),
+('Neha', 'Landhi', '48', '03237895671', 'D_48'),
+('Asif', 'North Karachi', '49', '03347895671', 'D_49'),
+('Hina', 'Orangi', '5', '03334567890', 'D_5'),
+('Anum', 'Surjani', '50', '03451238976', 'D_50'),
+('Zeeshan', 'Scheme 33', '51', '03061239876', 'D_51'),
+('Areeba', 'Gulshan', '52', '03171239876', 'D_52'),
+('Kashif', 'Nazimabad', '53', '03281239876', 'D_53'),
+('Maham', 'Saddar', '54', '03391239876', 'D_54'),
+('Adnan', 'Defence', '55', '03401239876', 'D_55'),
+('Nashit', 'Korangi', '56', '03012398765', 'D_56'),
+('Iram', 'Clifton', '57', '03112398765', 'D_57'),
+('Saad', 'Johar', '58', '03212398765', 'D_58'),
+('Hoor', 'FB Area', '59', '03312398765', 'D_59'),
+('Adeel', 'Orangi', '60', '03412398765', 'D_60'),
+('Jawad', 'Malir', '61', '03047895612', 'D_61'),
+('Kiran', 'Model Colony', '62', '03156789432', 'D_62'),
+('Taha', 'Landhi', '63', '03234567981', 'D_63'),
+('Nimra', 'North Karachi', '64', '03347895623', 'D_64'),
+('Rehan', 'Surjani', '65', '03456789231', 'D_65'),
+('Mehak', 'Scheme 33', '66', '03067891234', 'D_66'),
+('Hamza', 'Gulshan', '67', '03178912345', 'D_67'),
+('Mariam', 'Nazimabad', '68', '03289123456', 'D_68'),
+('Salman', 'Saddar', '69', '03391234567', 'D_69'),
+('Iqra', 'Defence', '70', '03400123456', 'D_70'),
+('Ammar', 'Korangi', '71', '03012340987', 'D_71'),
+('Zoya', 'Clifton', '72', '03123450987', 'D_72'),
+('Hassan', 'Johar', '73', '03234509876', 'D_73'),
+('Fatima', 'FB Area', '74', '03345670987', 'D_74'),
+('Danish', 'Orangi', '75', '03456780987', 'D_75'),
+('Anas', 'Malir', '76', '03098765432', 'D_76'),
+('Aqsa', 'Model Colony', '77', '03119876543', 'D_77'),
+('Owais', 'Landhi', '78', '03210987654', 'D_78'),
+('Amna', 'North Karachi', '79', '03321098765', 'D_79'),
+('Tariq', 'Clifton', '8', '03014567890', 'D_8'),
+('Haroon', 'Surjani', '80', '03432109876', 'D_80'),
+('Shayan', 'Scheme 33', '81', '03032145678', 'D_81'),
+('Laiba', 'Gulshan', '82', '03143219876', 'D_82'),
+('Rizwan', 'Nazimabad', '83', '03254321987', 'D_83'),
+('Ifrah', 'Saddar', '84', '03365432198', 'D_84'),
+('Babar', 'Defence', '85', '03476543219', 'D_85'),
+('Hiba', 'Korangi', '86', '03087654321', 'D_86'),
+('Ibrahim', 'Clifton', '87', '03198765432', 'D_87'),
+('Sadia', 'Johar', '88', '03219876543', 'D_88'),
+('Faizan', 'FB Area', '89', '03320987654', 'D_89'),
+('Nashwa', 'Orangi', '90', '03432198765', 'D_90'),
+('Sarfaraz', 'Malir', '91', '03045671234', 'D_91'),
+('Anaya', 'Model Colony', '92', '03156712345', 'D_92'),
+('Yahya', 'Landhi', '93', '03267891234', 'D_93'),
+('Rida', 'North Karachi', '94', '03378912345', 'D_94'),
+('Farooq', 'Surjani', '95', '03489012345', 'D_95'),
+('Aleena', 'Scheme 33', '96', '03090123456', 'D_96'),
+('Tariq', 'Gulshan', '97', '03101234567', 'D_97'),
+('Hafsa', 'Nazimabad', '98', '03212345678', 'D_98'),
+('Sameer', 'Saddar', '99', '03323456789', 'D_99');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `driver_login`
+--
+
+CREATE TABLE `driver_login` (
+  `Driver_ID` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `point_details`
+--
+
+CREATE TABLE `point_details` (
+  `Driver_ID` varchar(50) NOT NULL,
+  `Student_ID` varchar(50) NOT NULL,
+  `Point_no` varchar(50) NOT NULL,
+  `Route` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student`
+--
+
+CREATE TABLE `student` (
+  `Student_ID` varchar(50) NOT NULL,
+  `Name` varchar(50) NOT NULL,
+  `Point_no` varchar(50) NOT NULL,
+  `Phone` int(50) NOT NULL,
+  `Fee_Status` varchar(30) NOT NULL,
+  `Driver_ID` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`Student_ID`, `Name`, `Point_no`, `Phone`, `Fee_Status`, `Driver_ID`) VALUES
+('k213199', 'khadeejah', '21', 90078601, 'Paid', '12'),
+('k213456', 'laiba', '23', 2147483647, 'Paid', '78'),
+('k213457', 'Sameel', '13', 123547896, 'Paid', '13');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student_login`
+--
+
+CREATE TABLE `student_login` (
+  `Student_ID` varchar(50) NOT NULL,
+  `student_password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `student_login`
+--
+
+INSERT INTO `student_login` (`Student_ID`, `student_password`) VALUES
+('k214947', '123');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin_login`
+--
+ALTER TABLE `admin_login`
+  ADD PRIMARY KEY (`email`);
+
+--
+-- Indexes for table `driver`
+--
+ALTER TABLE `driver`
+  ADD UNIQUE KEY `Driver_ID` (`Driver_ID`),
+  ADD UNIQUE KEY `Point_no` (`Point_no`);
+
+--
+-- Indexes for table `driver_login`
+--
+ALTER TABLE `driver_login`
+  ADD PRIMARY KEY (`Driver_ID`);
+
+--
+-- Indexes for table `point_details`
+--
+ALTER TABLE `point_details`
+  ADD PRIMARY KEY (`Point_no`),
+  ADD UNIQUE KEY `Driver_ID` (`Driver_ID`,`Student_ID`);
+
+--
+-- Indexes for table `student`
+--
+ALTER TABLE `student`
+  ADD PRIMARY KEY (`Student_ID`),
+  ADD UNIQUE KEY `Driver_ID` (`Driver_ID`),
+  ADD UNIQUE KEY `Point_no` (`Point_no`);
+
+--
+-- Indexes for table `student_login`
+--
+ALTER TABLE `student_login`
+  ADD PRIMARY KEY (`Student_ID`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
